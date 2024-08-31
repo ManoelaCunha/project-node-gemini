@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "lib": ["es5", "es6", "ES2018"],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "lib": ["ES2018"],
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "allowJs": true,
+    "allowJs": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
   "ts-node": {
     "files": true
