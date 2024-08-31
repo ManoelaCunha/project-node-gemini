@@ -10,7 +10,6 @@ import { imageUpload } from "../services/imageUpload.service";
 export class MeasurementController {
   async create(req: Request, res: Response) {
     const { image, customer_code, measure_datetime, measure_type } = req.body;
-    console.log("body 2", req.body);
 
     try {
       const { type, tempFilePath } = await decodingBase64(image);
@@ -36,7 +35,7 @@ export class MeasurementController {
 
       await newMeasure.save();
 
-      res.status(201).json({
+      res.status(200).json({
         image_url: newMeasure.image_url,
         measure_value: newMeasure.measure_value,
         measure_uuid: newMeasure.measure_uuid,

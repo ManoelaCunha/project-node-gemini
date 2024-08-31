@@ -5,7 +5,6 @@ import { ValidationError } from "../interfaces";
 export const validateSchema =
   (schema: AnySchema) => (req: Request, res: Response, next: NextFunction) => {
     const { body } = req;
-
     const data = { ...body };
 
     if (body.image && typeof body.image === "string") {
