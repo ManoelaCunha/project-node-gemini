@@ -72,8 +72,7 @@ obter a medição através da foto de um medidor.
 
 ```javascript
 {
-"measure_uuid": "string",
-"confirmed_value": integer
+"success": true
 }
 ```
 
@@ -97,7 +96,7 @@ obter a medição através da foto de um medidor.
 ```javascript
 {
 "error_code": "MEASURE_NOT_FOUND",
-"error_description": "Leitura do mês já realizada"
+"error_description": "Nenhuma leitura encontrada"
 }
 ```
 
@@ -108,7 +107,7 @@ obter a medição através da foto de um medidor.
 ```javascript
 {
 "error_code": "CONFIRMATION_DUPLICATE",
-"error_description": "Nenhuma leitura encontrada"
+"error_description": "Leitura do mês já realizada"
 }
 ```
 
@@ -138,7 +137,7 @@ _Rota pode receber um query parameter “measure_type”, que deve ser ***WATER*
     "has_confirmed":boolean,
     "image_url": string
     }
-]
+  ]
 }
 ```
 
